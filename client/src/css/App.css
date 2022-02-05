@@ -1,0 +1,237 @@
+html, body, #root, .App {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  padding-top: 90px;
+}
+
+footer {
+  background: #141414;
+  color: white;
+  width: 100vw;
+  font-family: "Nunito", sans-serif;
+  padding: 24px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer p {
+  margin: 0;
+}
+footer > div {
+  display: grid;
+  gap: 12px;
+  padding: 0 8px;
+  grid-template-columns: 1fr 1fr;
+  justify-items: stretch;
+  width: 100vw;
+  max-width: 962px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  margin: 0;
+  background: #141414;
+  padding: 12px;
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: white;
+}
+header svg {
+  fill: white;
+}
+header a {
+  text-decoration: none;
+  color: white;
+}
+header a:hover {
+  color: #ffb133;
+}
+
+.Logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.Logo h2 {
+  margin: 0;
+}
+.Logo svg {
+  margin-right: 8px;
+  height: 20px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+nav a {
+  font-size: 1.2em;
+  margin-right: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+nav svg {
+  height: 20px;
+}
+nav svg:hover {
+  fill: #ffb133;
+}
+
+.Jumbotron {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  max-width: 996px;
+}
+@media screen and (min-width: 768px) {
+  .Jumbotron {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 52px;
+  }
+}
+.Jumbotron img {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .Jumbotron img {
+    display: block;
+    width: 80vw;
+    max-width: 400px;
+    border-radius: 50%;
+    grid-column: 1/2;
+    box-shadow: 0 0 10px #141414;
+  }
+}
+.Jumbotron div {
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .Jumbotron div {
+    align-items: flex-start;
+  }
+}
+.Jumbotron div .Quote {
+  margin-bottom: 24px;
+}
+.Jumbotron div button {
+  background: #b64c00;
+  font-size: 1.2em;
+  color: white;
+  border: none;
+  padding: 24px;
+  cursor: pointer;
+  font-family: "Nunito", sans-serif;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.Jumbotron div button:hover {
+  background: #ff7b1d;
+}
+
+.Quote {
+  font-family: "Source Serif 4", sans-serif;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .Quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: flex-start;
+    border-left: 3px solid #141414;
+    padding-left: 24px;
+    text-align: left;
+  }
+}
+
+.Proof {
+  font-family: "Source Serif 4", sans-serif;
+  padding: 48px;
+  margin: 48px 0 0 0;
+  background: #e2e2e2;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Proof div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 24px;
+}
+.Proof h3 {
+  display: flex;
+  flex: 1 130px;
+}
+
+.Recordings {
+  font-family: "Source Serif 4", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 48px;
+  width: 100vw;
+}
+.Recordings h1 {
+  margin-top: 0;
+}
+.Recordings > div {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .Recordings > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+}
+.Recordings > div div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 24px;
+}
+.Recordings > div div h2, .Recordings > div div h3 {
+  margin: 0;
+}
+.Recordings > div div img {
+  width: 80vw;
+  max-width: 200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=App.css.map */

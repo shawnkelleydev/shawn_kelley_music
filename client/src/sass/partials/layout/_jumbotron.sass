@@ -1,0 +1,33 @@
+@use '../utilities/_var'
+@use '../utilities/_mixins'
+
+.Jumbotron
+  @include mixins.flex-col 
+    justify-content: center
+  min-height: 50vh
+  max-width: var.$width-max-layout
+  @media screen and (min-width: var.$break-tab)
+    display: grid
+    align-items: center
+    justify-items: center
+    grid-template-columns: 1fr 1fr
+    gap: 52px
+  img
+    display: none    
+    @media screen and (min-width: var.$break-tab)
+      display: block
+      width: 80vw
+      max-width: 400px
+      border-radius: 50%
+      grid-column: 1/2
+      box-shadow: 0 0 10px var.$color-primary 
+  div
+    max-width: 350px
+    @include mixins.flex-col 
+    @media screen and (min-width: var.$break-tab)
+      align-items: flex-start
+    .Quote
+      margin-bottom: 24px
+    button
+      @include mixins.action-button
+  

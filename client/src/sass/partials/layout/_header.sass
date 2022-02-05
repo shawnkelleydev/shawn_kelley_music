@@ -1,0 +1,21 @@
+@use '../utilities/_mixins'
+@use '../utilities/_var'
+  
+header
+  position: fixed
+  top: 0
+  width: 100vw
+  margin: 0
+  background: var.$color-primary 
+  padding: 12px
+  font-family: var.$font-stack-nunito 
+  @include mixins.flex-row($just: space-between)
+    align-items: flex-end
+  color: white
+  svg
+    fill: white
+  a
+    text-decoration: none
+    color: white
+    &:hover
+      color: var.$color-accent

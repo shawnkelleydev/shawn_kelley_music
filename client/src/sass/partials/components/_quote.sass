@@ -1,0 +1,13 @@
+@use '../utilities/_var'
+@use '../utilities/_mixins'
+  
+.Quote
+  font-family: var.$font-stack-source
+  text-align: center
+  
+  @media screen and (min-width: var.$break-tab)
+    @include mixins.flex-col
+      align-items: flex-start
+    border-left: 3px solid var.$color-primary
+    padding-left: 24px
+    text-align: left

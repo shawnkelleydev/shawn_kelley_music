@@ -1,0 +1,21 @@
+@use '../utilities/_var'
+@use '../utilities/_mixins'
+  
+footer
+  background: var.$color-primary
+  color: white
+  width: 100vw
+  font-family: var.$font-stack-nunito
+  padding: 24px 8px
+  @include mixins.flex-col 
+  p
+    margin: 0
+
+  > div
+    display: grid
+    gap: 12px
+    padding: 0 8px
+    grid-template-columns: 1fr 1fr
+    justify-items: stretch
+    width: 100vw
+    max-width: 962px

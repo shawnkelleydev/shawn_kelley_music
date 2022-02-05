@@ -1,0 +1,35 @@
+@use './_var'
+  
+@mixin flex-row($just: null)
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: $just
+  @content
+
+@mixin flex-col($just: null)
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: $just
+  @content
+
+@mixin display-items($bg: null)
+  @include flex-row
+  background: $bg
+  flex-wrap: wrap
+  @content
+
+@mixin action-button
+  background: var.$color-action
+  font-size: 1.2em
+  color: white
+  border: none
+  padding: 24px
+  cursor: pointer
+  font-family: var.$font-stack-nunito
+  border-radius: var.$rad-xxs
+  transition: all .3s ease
+  @media screen and (min-width: var.$break-dt)
+  &:hover
+    background: lighten(var.$color-action, 20%)

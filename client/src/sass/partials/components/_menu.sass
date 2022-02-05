@@ -1,0 +1,14 @@
+@use '../utilities/_mixins'
+@use '../utilities/_var'
+
+nav 
+  @include mixins.flex-row
+  a
+    font-size: 1.2em
+    margin-right: 8px
+    @include mixins.flex-row 
+    
+  svg
+    height: 20px
+    &:hover
+      fill: var.$color-accent

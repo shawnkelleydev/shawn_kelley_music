@@ -1,0 +1,17 @@
+@use '../utilities/_mixins'
+@use '../utilities/_var'
+  
+.Proof
+  font-family: var.$font-stack-source
+  padding: 48px
+  margin: 48px 0 0 0
+  background: var.$color-bg-alt
+  width: 100vw
+  @include mixins.flex-col 
+  div
+    @include mixins.display-items 
+      align-items: flex-start
+      gap: 24px
+  h3
+    display: flex
+    flex: 1 130px
