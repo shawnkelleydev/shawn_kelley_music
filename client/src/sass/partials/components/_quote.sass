@@ -4,10 +4,6 @@
 .Quote
   font-family: var.$font-stack-source
   text-align: center
+  @include mixins.flex-col
+    
   
-  @media screen and (min-width: var.$break-tab)
-    @include mixins.flex-col
-      align-items: flex-start
-    border-left: 3px solid var.$color-primary
-    padding-left: 24px
-    text-align: left

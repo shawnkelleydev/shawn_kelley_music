@@ -5,20 +5,37 @@ import { useEffect, useState } from "react";
 
 export default function Jumbotron() {
   const [quote, setQuote] = useState(null);
+  const [n, setN] = useState(null);
+  const [prevN, setPrevN] = useState(null);
 
   useEffect(() => {
-    let n = Math.floor(Math.random() * quotes.length);
-    let q = quotes[n];
-    setQuote(q);
+    let i = Math.floor(Math.random() * quotes.length);
+    setN(i);
   }, []);
 
+  useEffect(() => {
+    if (n || n === 0) {
+      setQuote(quotes[n]);
+      setPrevN(n);
+    }
+  }, [n]);
+
+  useEffect(() => {
+    if (prevN || prevN === 0) {
+      function newQ() {
+        let ding = false;
+        let i;
+        while (!ding) {
+          i = Math.floor(Math.random() * quotes.length);
+          ding = i !== prevN ? true : false;
+        }
+        setN(i);
+      }
+      setTimeout(newQ, 5000);
+    }
+  }, [prevN]);
+
   return (
-    <div className="Jumbotron">
-      <img src={headshot} alt="shawn kelley head and top of shoulders" />
-      <div>
-        {quote ? <Quote quote={quote} /> : null}
-        <button>Browse Music</button>
-      </div>
-    </div>
+    <div className="Jumbotron">{quote ? <Quote quote={quote} /> : null}</div>
   );
 }

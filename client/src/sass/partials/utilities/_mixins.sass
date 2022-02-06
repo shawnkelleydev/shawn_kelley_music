@@ -1,4 +1,6 @@
 @use './_var'
+
+
   
 @mixin flex-row($just: null)
   display: flex
@@ -33,3 +35,7 @@
   @media screen and (min-width: var.$break-dt)
   &:hover
     background: lighten(var.$color-action, 20%)
+
+@mixin content-min-height
+  @include flex-col
+  min-height: var.$height-between

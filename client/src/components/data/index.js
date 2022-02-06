@@ -18,19 +18,21 @@ export const quotes = [
 ];
 
 export const institutions = [
+  "International Tuba Euphonium Conference",
+  "Northeast Regional Tuba Euphonium Conference",
+  "Southeast Regional Tuba Euphonium Conference",
+  "Army Band Tuba-Euphonium Workshop",
+  "III Marine Expeditionary Force Band",
   "Eastman School of Music",
-  "Northwestern University",
-  "Cincinnati Conservatory of Music",
-  "Penn State University",
-  "University of Michigan",
-  "Michigan State University",
-  "University of Georgia",
-  "University of Tennessee",
-  "Ithaca College",
-  "University of Nevada Las Vegas",
-  "When Tuba Come One",
-  "Funkaru",
-  "Euphonix",
+  "Northwestern University Bienen School of Music",
+  "University of Cincinnati College-Conservatory of Music",
+  "Penn State University School of Music",
+  "University of Michigan School of Music",
+  "Michigan State University College of Music",
+  "University of Georgia Hugh Hodgson School of Music",
+  "University of Tennessee School of Music",
+  "Ithaca College School of Music",
+  "University of Nevada Las Vegas School of Music",
 ];
 
 export const recordings = [

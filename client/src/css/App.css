@@ -17,6 +17,7 @@ footer {
   width: 100vw;
   font-family: "Nunito", sans-serif;
   padding: 24px 8px;
+  height: 180px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -97,78 +98,26 @@ nav svg:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 50vh;
+  height: 40vh;
   max-width: 996px;
 }
-@media screen and (min-width: 768px) {
-  .Jumbotron {
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    grid-template-columns: 1fr 1fr;
-    gap: 52px;
-  }
-}
-.Jumbotron img {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  .Jumbotron img {
-    display: block;
-    width: 80vw;
-    max-width: 400px;
-    border-radius: 50%;
-    grid-column: 1/2;
-    box-shadow: 0 0 10px #141414;
-  }
-}
 .Jumbotron div {
-  max-width: 350px;
+  font-family: "Nunito", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-@media screen and (min-width: 768px) {
-  .Jumbotron div {
-    align-items: flex-start;
-  }
-}
-.Jumbotron div .Quote {
-  margin-bottom: 24px;
-}
-.Jumbotron div button {
-  background: #b64c00;
-  font-size: 1.2em;
-  color: white;
-  border: none;
-  padding: 24px;
-  cursor: pointer;
-  font-family: "Nunito", sans-serif;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-.Jumbotron div button:hover {
-  background: #ff7b1d;
 }
 
 .Quote {
   font-family: "Source Serif 4", sans-serif;
   text-align: center;
-}
-@media screen and (min-width: 768px) {
-  .Quote {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-items: flex-start;
-    border-left: 3px solid #141414;
-    padding-left: 24px;
-    text-align: left;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .Proof {
-  font-family: "Source Serif 4", sans-serif;
+  font-family: "Nunito", sans-serif;
   padding: 48px;
   margin: 48px 0 0 0;
   background: #e2e2e2;
@@ -182,16 +131,16 @@ nav svg:hover {
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 24px;
 }
 .Proof h3 {
   display: flex;
-  flex: 1 130px;
+  flex: 1 200px;
 }
 
 .Recordings {
-  font-family: "Source Serif 4", sans-serif;
+  font-family: "Nunito", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -228,6 +177,28 @@ nav svg:hover {
 .Recordings > div div img {
   width: 80vw;
   max-width: 200px;
+}
+
+.Action {
+  background: #b64c00;
+  font-size: 1.2em;
+  color: white;
+  border: none;
+  padding: 24px;
+  cursor: pointer;
+  font-family: "Nunito", sans-serif;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.Action:hover {
+  background: #ff7b1d;
+}
+
+.Store {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 90px - 180px);
 }
 
 * {
