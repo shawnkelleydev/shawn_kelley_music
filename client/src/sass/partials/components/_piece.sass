@@ -1,0 +1,22 @@
+@use '../utilities/_var'
+  
+.Piece
+  flex: 1 300px
+  cursor: pointer
+  box-shadow: 0 0 10px var.$color-primary
+  padding: 24px
+  color: black
+  @media screen and (min-width: var.$break-dt)
+    &:hover
+      color: white
+      background: var.$color-link-hover
+  h1
+    text-transform: capitalize
+  h1, h2, h3, h4, h5, h6
+    margin: 0
+
+  ul
+    list-style: none
+    padding: 0
+    li
+      font-size: 1em

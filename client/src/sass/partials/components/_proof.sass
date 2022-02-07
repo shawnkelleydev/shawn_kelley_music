@@ -2,16 +2,21 @@
 @use '../utilities/_var'
   
 .Proof
-  font-family: var.$font-stack-nunito
   padding: 48px
   margin: 48px 0 0 0
-  background: var.$color-bg-alt
+  color: white
+  background: darken(complement(var.$color-accent), 10%)
+  box-shadow: 0 0 16px var.$color-primary
   width: 100vw
   @include mixins.flex-col 
   div
     @include mixins.display-items 
       align-items: stretch
-      gap: 24px
+      gap: 36px
+  h1
+    font-size: 3em
+    margin-bottom: 48px
   h3
     display: flex
+    font-size: 1.5em
     flex: 1 200px

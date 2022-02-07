@@ -23,7 +23,7 @@
   @content
 
 @mixin action-button
-  background: var.$color-action
+  background: var.$color-accent
   font-size: 1.2em
   color: white
   border: none
@@ -34,7 +34,7 @@
   transition: all .3s ease
   @media screen and (min-width: var.$break-dt)
   &:hover
-    background: lighten(var.$color-action, 20%)
+    background: lighten(var.$color-accent, 20%)
 
 @mixin content-min-height
   @include flex-col

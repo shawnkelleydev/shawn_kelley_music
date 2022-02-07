@@ -1,2 +1,22 @@
+@use '../utilities/_var'
+  
 *
   box-sizing: border-box
+  font-family: var.$font-stack-nunito
+
+a 
+  text-decoration: none
+
+a:hover, svg:hover
+  color: var.$color-link-hover 
+  fill: var.$color-link-hover
+
+.active
+  color: var.$color-link-hover 
+  fill: var.$color-link-hover
+
+.uppercase
+  text-transform: uppercase
+
+.cap
+  text-transform: capitalize

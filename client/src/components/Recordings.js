@@ -1,4 +1,5 @@
 import { recordings } from "./data";
+import Recording from "./Recording";
 
 export default function Recordings() {
   return (
@@ -6,11 +7,7 @@ export default function Recordings() {
       <h1>Recordings</h1>
       <div>
         {recordings.map((rec, i) => (
-          <div key={i}>
-            <img src={rec.img} />
-            <h2>{rec.title}</h2>
-            <h3>{rec.artist}</h3>
-          </div>
+          <Recording key={i} rec={rec} />
         ))}
       </div>
     </div>
