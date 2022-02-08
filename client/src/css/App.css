@@ -68,6 +68,7 @@ header a {
 .Logo svg {
   margin-right: 8px;
   height: 20px;
+  fill: #ea7d61;
 }
 
 nav {
@@ -84,10 +85,13 @@ nav a {
 }
 nav svg {
   height: 20px;
+  transition: all 0.3s ease;
+}
+nav svg:hover {
+  fill: #34c0e4;
 }
 
 .Jumbotron {
-  height: 40vh;
   max-width: 996px;
   transition: all 0.3s ease;
   display: flex;
@@ -99,19 +103,26 @@ nav svg {
   color: transparent;
 }
 .Jumbotron div {
-  font-family: "Nunito", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .Quote {
-  font-family: "Source Serif 4", sans-serif;
-  text-align: center;
-  padding: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  font-family: "Source Serif 4", sans-serif;
+  text-align: center;
+  max-width: 95vw;
+  padding: 8px;
+  height: 45vh;
+}
+@media screen and (min-width: 768px) {
+  .Quote {
+    height: 35vh;
+  }
 }
 
 .Proof {
@@ -126,6 +137,7 @@ nav svg {
   align-items: center;
 }
 .Proof div {
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -136,11 +148,6 @@ nav svg {
 .Proof h1 {
   font-size: 3em;
   margin-bottom: 48px;
-}
-.Proof h3 {
-  display: flex;
-  font-size: 1.5em;
-  flex: 1 200px;
 }
 
 .Recordings {
@@ -172,7 +179,20 @@ nav svg {
     gap: 24px;
   }
 }
-.Recordings > div > div {
+
+.Recordings .hidden {
+  transform: translate(-20%);
+  box-shadow: none;
+  color: transparent;
+}
+.Recordings .hidden img {
+  opacity: 0;
+}
+.Recordings .hidden iframe {
+  opacity: 0;
+}
+
+.Recording {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -181,45 +201,61 @@ nav svg {
   padding: 48px 24px;
   width: 95vw;
   text-align: center;
-  box-shadow: 0 0 20px #141414;
+  box-shadow: 0 8px 16px #141414;
+  transform: translate(0);
+  transition: all 0.3s ease-in;
 }
 @media screen and (min-width: 375px) {
-  .Recordings > div > div {
+  .Recording {
     padding: 48px;
   }
 }
 @media screen and (min-width: 768px) {
-  .Recordings > div > div {
+  .Recording {
     width: auto;
   }
 }
-.Recordings > div > div h2, .Recordings > div > div h3 {
+.Recording h2, .Recording h3 {
   margin: 0;
 }
-.Recordings > div > div img {
+.Recording img {
   width: 80vw;
   max-width: 200px;
   box-shadow: 0 0 8px #141414;
   margin-bottom: 8px;
+  opacity: 1;
+  transition: all 0.3s ease;
 }
-.Recordings > div > div iframe {
+.Recording iframe {
   margin-bottom: 8px;
   max-width: 100%;
+  opacity: 1;
+  transition: all 0.3s ease;
 }
 
 .Action {
-  background: #9D3115;
-  font-size: 1.2em;
-  color: white;
-  border: none;
-  padding: 24px;
-  cursor: pointer;
-  font-family: "Nunito", sans-serif;
-  border-radius: 4px;
-  transition: all 0.3s ease;
+  overflow: hidden;
 }
-.Action:hover {
-  background: #e45834;
+.Action span {
+  position: absolute;
+  padding: 24px;
+  background: #9D3115;
+}
+.Action .button {
+  transform: translate(0);
+  transition: all 0.3s ease;
+  border: none;
+  color: black;
+  background: #15819d;
+}
+.Action span, .Action .button {
+  border-radius: 4px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+}
+.Action .hidden {
+  transform: translate(-100%);
 }
 
 .Store {
@@ -227,63 +263,139 @@ nav svg {
   flex-direction: column;
   align-items: center;
   min-height: calc(100vh - 90px - 180px);
+  width: 100vw;
 }
 .Store > h1 {
   font-size: 3em;
 }
-.Store > div {
+
+.Piece {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 300px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #141414;
+  padding: 48px 0;
+  margin-bottom: 24px;
+  color: black;
+  transition: background 0.3s ease;
+  width: 100%;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .Piece {
+    margin: 0;
+  }
+}
+.Piece h1 {
+  text-transform: capitalize;
+  margin: 0 0 24px 0;
+  color: #9D3115;
+}
+.Piece h2 {
+  margin: 0 0 8px 0;
+}
+.Piece ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.Piece ul li {
+  font-size: 1em;
+}
+.Piece > div {
+  width: 100%;
+  height: 100%;
+}
+.Piece .data {
+  display: grid;
+  text-align: left;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  justify-items: end;
+}
+.Piece .data img {
+  grid-column: 1/2;
+  width: 100%;
+  max-height: 140px;
+  width: auto;
+}
+.Piece .data > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: flex-start;
+  padding: 0 8px;
+  justify-content: space-between;
+  justify-self: start;
+}
+.Piece .data ul {
+  grid-column: 2/3;
+}
+
+.PieceFeature {
+  background: tomato;
+}
+
+.Home {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 90px - 180px);
+}
+.Home > .Action {
+  margin: 16px 0 64px 0;
+}
+
+.BreadCrumb {
+  margin-bottom: 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.BreadCrumb a {
+  color: #9D3115;
+  width: fit-content;
+}
+.BreadCrumb span {
+  margin: 0 8px;
+}
+
+.PieceMenu {
+  width: 95vw;
+  margin-bottom: 48px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 @media screen and (min-width: 768px) {
-  .Store > div {
+  .PieceMenu {
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
+    gap: 24px;
+    align-items: stretch;
   }
 }
 
-.Cart {
+.Org {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: calc(100vh - 90px - 180px);
+  font-size: 1.5em;
+  flex: 1 200px;
 }
-
-.Piece {
-  flex: 1 300px;
-  cursor: pointer;
-  box-shadow: 0 0 10px #141414;
-  padding: 24px;
-  color: black;
+.Org span {
+  transition: all 0.3s ease-in;
+  transform: translate(0);
+  color: white;
 }
-@media screen and (min-width: 996px) {
-  .Piece:hover {
-    color: white;
-    background: #34c0e4;
-  }
-}
-.Piece h1 {
-  text-transform: capitalize;
-}
-.Piece h1, .Piece h2, .Piece h3, .Piece h4, .Piece h5, .Piece h6 {
-  margin: 0;
-}
-.Piece ul {
-  list-style: none;
-  padding: 0;
-}
-.Piece ul li {
-  font-size: 1em;
-}
-
-.PieceFeature {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: calc(100vh - 90px - 180px);
+.Org .hidden {
+  transform: translate(-20%);
+  color: transparent;
 }
 
 * {
@@ -293,11 +405,11 @@ nav svg {
 
 a {
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-a:hover, svg:hover {
+a:hover {
   color: #34c0e4;
-  fill: #34c0e4;
 }
 
 .active {

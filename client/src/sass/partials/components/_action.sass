@@ -2,5 +2,22 @@
 @use '../utilities/_var'
   
 .Action
-  @include mixins.action-button
-  
+  overflow: hidden
+  // .Action size set by js relative to span real size
+  span
+    position: absolute
+    padding: 24px
+    background: var.$color-accent
+  .button
+    transform: translate(0)
+    transition: all .3s ease
+    border: none
+    color: black
+    background: var.$color-accent-2
+  span, .button
+    border-radius: var.$rad-xxs
+    color: white
+    font-size: 1em
+    cursor: pointer
+  .hidden
+    transform: translate(-100%)

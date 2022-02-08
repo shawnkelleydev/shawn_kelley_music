@@ -11,7 +11,7 @@ export default function Cart() {
       x="0px"
       y="0px"
       viewBox="0 0 15 15"
-      className={location.pathname === "/cart" ? "active" : null}
+      className={location.pathname.includes("cart") ? "active" : null}
     >
       <g id="g3">
         <path

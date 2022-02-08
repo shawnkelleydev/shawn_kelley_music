@@ -1,0 +1,11 @@
+@use '../utilities/_mixins'
+@use '../utilities/_var'
+
+.PieceMenu
+  width: 95vw
+  margin-bottom: 48px
+  @include mixins.flex-col 
+    @media screen and (min-width: var.$break-tab)
+      @include mixins.display-items
+        gap: 24px
+        align-items: stretch

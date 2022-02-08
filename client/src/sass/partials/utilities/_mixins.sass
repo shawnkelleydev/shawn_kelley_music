@@ -22,20 +22,6 @@
   flex-wrap: wrap
   @content
 
-@mixin action-button
-  background: var.$color-accent
-  font-size: 1.2em
-  color: white
-  border: none
-  padding: 24px
-  cursor: pointer
-  font-family: var.$font-stack-nunito
-  border-radius: var.$rad-xxs
-  transition: all .3s ease
-  @media screen and (min-width: var.$break-dt)
-  &:hover
-    background: lighten(var.$color-accent, 20%)
-
 @mixin content-min-height
   @include flex-col
   min-height: var.$height-between

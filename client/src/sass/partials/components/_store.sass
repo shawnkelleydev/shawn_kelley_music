@@ -3,11 +3,9 @@
   
 .Store
   @include mixins.content-min-height
+  width: 100vw
   > h1
     font-size: 3em
-  > div
-    @include mixins.flex-col 
-    @media screen and (min-width: var.$break-tab)
-      @include mixins.display-items
+    
   
   

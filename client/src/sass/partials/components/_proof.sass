@@ -10,13 +10,11 @@
   width: 100vw
   @include mixins.flex-col 
   div
+    overflow: hidden
     @include mixins.display-items 
       align-items: stretch
       gap: 36px
+    
   h1
     font-size: 3em
     margin-bottom: 48px
-  h3
-    display: flex
-    font-size: 1.5em
-    flex: 1 200px

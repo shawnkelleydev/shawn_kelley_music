@@ -1,0 +1,13 @@
+@use '../utilities/_var'
+@use '../utilities/_mixins'
+  
+.BreadCrumb
+  margin-bottom: 16px
+  width: 100%
+  @include mixins.flex-row
+    justify-content: center
+  a
+    color: var.$color-accent
+    width: fit-content
+  span
+    margin: 0 8px

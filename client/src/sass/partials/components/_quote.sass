@@ -2,9 +2,14 @@
 @use '../utilities/_mixins'
   
 .Quote
+  @include mixins.flex-col
+    justify-content: center
   font-family: var.$font-stack-source
   text-align: center
+  max-width: 95vw
   padding: 8px
-  @include mixins.flex-col
+  height: 45vh
+  @media screen and (min-width: var.$break-tab)
+    height: 35vh
     
   

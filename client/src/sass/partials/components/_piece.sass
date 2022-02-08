@@ -1,22 +1,51 @@
 @use '../utilities/_var'
+@use '../utilities/_mixins'
   
 .Piece
+  @include mixins.flex-col
   flex: 1 300px
   cursor: pointer
   box-shadow: 0 0 10px var.$color-primary
-  padding: 24px
+  padding: 48px 0
+  margin-bottom: 24px
   color: black
-  @media screen and (min-width: var.$break-dt)
-    &:hover
-      color: white
-      background: var.$color-link-hover
+  transition: background .3s ease
+  width: 100%
+  text-align: center
+  @media screen and (min-width: var.$break-tab)
+    margin: 0
   h1
     text-transform: capitalize
-  h1, h2, h3, h4, h5, h6
-    margin: 0
-
+    margin: 0 0 24px 0
+    color: var.$color-accent
+  h2
+    margin: 0 0 8px 0
   ul
     list-style: none
     padding: 0
+    margin: 0
     li
       font-size: 1em
+  >div
+    width: 100%
+    height: 100%
+  .data
+    display: grid
+    text-align: left
+    grid-template-columns: 50% 50%
+    width: 100%
+    justify-items: end
+    img
+      grid-column: 1/2
+      width: 100%
+      max-height: 140px
+      width: auto
+    > div 
+      @include mixins.flex-col
+        align-items: flex-start
+        padding: 0 8px
+        justify-content: space-between
+        justify-self: start
+    ul
+      grid-column: 2/3
+

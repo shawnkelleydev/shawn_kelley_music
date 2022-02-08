@@ -5,7 +5,7 @@ export default function Menu() {
   return (
     <nav>
       <NavLink to="/store">store</NavLink>
-      <NavLink to="/cart">
+      <NavLink to="/store/cart">
         <CartIcon />
       </NavLink>
     </nav>

@@ -15,18 +15,25 @@ export default function Piece(props) {
     >
       <div>
         <h1>{props.piece.title}</h1>
-        <ul>
-          <li>Completed {props.piece.completionYear}</li>
-          <li className="uppercase">{props.piece.instrumentation}</li>
-          <li className="cap">{props.piece.publisher.name}</li>
-        </ul>
+        <div className="data">
+          {props.piece.img ? (
+            <img src={props.piece.img} alt={props.piece.title} />
+          ) : null}
+          <div>
+            <ul>
+              <li className="uppercase">{props.piece.instrumentation}</li>
+              <li>ca {props.piece.duration}m</li>
+              <li className="cap">{props.piece.difficulty}</li>
+            </ul>
+            {props.piece.externalBuyUrl ? (
+              <Action
+                text="buy"
+                click={() => window.open(props.piece.externalBuyUrl, "_blank")}
+              />
+            ) : null}
+          </div>
+        </div>
       </div>
-      {props.piece.externalBuyUrl ? (
-        <Action
-          text="buy piece"
-          click={() => window.open(props.piece.externalBuyUrl, "_blank")}
-        />
-      ) : null}
     </div>
   );
 }

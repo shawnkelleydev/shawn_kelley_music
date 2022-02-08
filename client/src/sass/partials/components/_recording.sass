@@ -1,0 +1,42 @@
+@use '../utilities/_mixins'
+@use '../utilities/_var'
+
+.Recordings
+  .hidden
+    transform: translate(-20%)
+    box-shadow: none
+    color: transparent
+    img
+      opacity: 0
+    iframe
+      opacity: 0    
+  
+.Recording
+  @include mixins.flex-col 
+    justify-content: space-between
+  flex: 1 300px
+  padding: 48px 24px
+  width: 95vw
+  text-align: center
+  box-shadow: 0 8px 16px var.$color-primary
+  transform: translate(0)
+  transition: all .3s ease-in
+  @media screen and (min-width: var.$break-iphone)
+    padding: 48px
+  @media screen and (min-width: var.$break-tab)
+    width: auto
+
+  h2, h3
+    margin: 0
+  img
+    width: 80vw
+    max-width: 200px
+    box-shadow: 0 0 8px var.$color-primary
+    margin-bottom: 8px
+    opacity: 1
+    transition: all .3s ease
+  iframe
+    margin-bottom: 8px
+    max-width: 100%
+    opacity: 1
+    transition: all .3s ease

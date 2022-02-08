@@ -70,7 +70,7 @@ export const recordings = [
   {
     title: "SWRTEC 2013",
     artist: "Las Tubas de Tucson",
-    vid: "https://www.youtube.com/embed/DOqt5JIXdqwe",
+    vid: "https://www.youtube.com/embed/DOqt5JIXdqw",
   },
 ];
 
@@ -78,18 +78,17 @@ export const pieces = [
   {
     id: 1,
     title: "urban suite",
+    img: "https://images-na.ssl-images-amazon.com/images/I/413g0ycJ9eL._SY344_BO1,204,203,200_.jpg",
     publisher: { name: "cimarron music", year: 2009 },
     ensembleType: "tuba quartet",
     instrumentation: "eett",
-    parts: [
-      { id: 11, part: "full set", price: 25 },
-      { id: 12, part: "score", price: 10 },
-      { id: 13, part: "euphonium 1", price: 5 },
-      { id: 14, part: "euphonium 2", price: 5 },
-      { id: 15, part: "Tuba 1", price: 5 },
-      { id: 16, part: "Tuba 2", price: 5 },
-    ],
     duration: 12,
+    difficulty: "advanced",
+    highlights: [
+      "Fun and Beautiful",
+      "Challenging for all players",
+      "Finalist for 2010 Harvey Phillips Award",
+    ],
     completionYear: 2008,
     premier: {
       location: "Eastman School of Music",
@@ -104,5 +103,29 @@ export const pieces = [
       "*Urban* *Suite* is a story-celebration of life pursued with electric curiosity and restless uncertainty.",
     ],
     externalBuyUrl: "https://www.cimarronmusic.com/urban-suite-8504",
+  },
+  {
+    id: 2,
+    title: "an off day",
+    img: "https://www.cimarronmusic.com/media/catalog/product/cache/6517c62f5899ad6aa0ba23ceb3eeff97/c/m/cm5016cover_2.png",
+    publisher: { name: "cimarron music", year: 2021 },
+    ensembleType: "tuba quartet",
+    instrumentation: "eett",
+    duration: 8,
+    difficulty: "advanced",
+    completionYear: 2020,
+    externalBuyUrl: "https://www.cimarronmusic.com/anoffday",
+  },
+  {
+    id: 3,
+    title: "home suite home",
+    img: "https://www.lowbrassmusic.com/media/catalog/product/cache/6517c62f5899ad6aa0ba23ceb3eeff97/c/m/cm5013cover_2.png",
+    publisher: { name: "cimarron music", year: 2021 },
+    ensembleType: "tuba quartet",
+    instrumentation: "eett",
+    duration: 12,
+    difficulty: "advanced",
+    completionYear: 2020,
+    externalBuyUrl: "https://www.cimarronmusic.com/homesuitehome",
   },
 ];
