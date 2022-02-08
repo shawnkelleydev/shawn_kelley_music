@@ -1,8 +1,8 @@
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import Action from "./Action";
 
 export default function Piece(props) {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   return (
     <div

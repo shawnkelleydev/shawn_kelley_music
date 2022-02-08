@@ -40,7 +40,7 @@ export default function Jumbotron() {
       }
       setTimeout(fadeTrue, fadeInt);
     }
-  }, [prevN]);
+  }, [prevN, fadeInt, n]);
 
   useEffect(() => {
     if (fade) {
