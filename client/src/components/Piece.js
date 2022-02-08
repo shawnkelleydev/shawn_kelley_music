@@ -7,11 +7,11 @@ export default function Piece(props) {
   return (
     <div
       className="Piece"
-      onClick={(e) => {
-        if (e.target.tagName !== "BUTTON") {
-          navigate(`/store/${props.piece.title}`);
-        }
-      }}
+      // onClick={(e) => {
+      //   if (e.target.tagName !== "BUTTON") {
+      //     navigate(`/store/${props.piece.title}`);
+      //   }
+      // }}
     >
       <div>
         <h1>{props.piece.title}</h1>
