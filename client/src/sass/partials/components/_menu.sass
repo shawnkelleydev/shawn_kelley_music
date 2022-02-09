@@ -7,6 +7,9 @@ nav
     font-size: 1.2em
     margin-right: 8px
     @include mixins.flex-row 
+    @media screen and (min-width: var.$break-tab)
+      margin: 0
+      margin-left: 24px
     
   svg
     height: 20px

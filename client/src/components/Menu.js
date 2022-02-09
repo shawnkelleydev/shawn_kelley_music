@@ -2,12 +2,15 @@ import { NavLink } from "react-router-dom";
 // import CartIcon from "./CartIcon";
 
 export default function Menu() {
+  const menuItems = ["about", "store"];
+
   return (
     <nav>
-      <NavLink to="/store">store</NavLink>
-      {/* <NavLink to="/store/cart">
-        <CartIcon />
-      </NavLink> */}
+      {menuItems.map((item, i) => (
+        <NavLink key={i} to={`/${item}`}>
+          {item}
+        </NavLink>
+      ))}
     </nav>
   );
 }

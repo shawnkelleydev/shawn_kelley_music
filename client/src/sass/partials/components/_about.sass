@@ -1,0 +1,24 @@
+@use '../utilities/_mixins'
+@use '../utilities/_var'
+  
+.About
+  @include mixins.content-min-height
+  font-size: 1.1em
+  .grid
+    width: 100%
+    max-width: var.$width-max-layout 
+    display: grid
+    justify-items: end
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    gap: 48px
+    padding: 48px
+    @media screen and (max-width: var.$break-tab)
+      @include mixins.flex-col 
+      padding: 24px
+    h1
+      margin: 0
+
+  img
+    width: 80vw
+    max-width: 300px
+    border-radius: 50%

@@ -129,3 +129,10 @@ export const pieces = [
     externalBuyUrl: "https://www.cimarronmusic.com/homesuitehome",
   },
 ];
+
+export const bio = [
+  "Shawn Kelley is a musician, composer, and software engineer praised for his innovative compositions for tuba quartet, in which he loves to blend fun, beauty, and meaning.",
+  "Kelley’s first published work, *Urban* *Suite*, was premiered at Eastman School of Music in 2009.  It was a finalist for the 2010 International Tuba Euphonium Association Harvey Phillips Award for Excellence in Composition, was utilized in 2010 International Tuba Euphonium Conference Quartet Competition Semi-Final Round, and it continues to be played around the world.",
+  "As a performer, Kelley has appeared with GRAMMY®-award winners Doc Severinsen, Kenny Rogers, and Charlie Daniels.  As a member of the University of Tennessee’s Pride of the Southland Marching Band, he performed for President George W. Bush in his second inauguration parade, hundreds of thousands of football bands across the eastern half of the United States, and many curious onlookers in Ireland.",
+  "Kelley resides in the northern Denver metro area with his wife, flutist Whitney Kelley, two beautiful daughters, and English Springer Spaniel.",
+];
