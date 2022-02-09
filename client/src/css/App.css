@@ -253,6 +253,11 @@ nav svg:hover {
   color: black;
   background: #15819d;
 }
+@media screen and (max-width: 996px) {
+  .Action .button {
+    transform: translate(-100%);
+  }
+}
 .Action span, .Action .button {
   border-radius: 4px;
   color: white;

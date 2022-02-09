@@ -10,6 +10,8 @@
     background: var.$color-accent
   .button
     transform: translate(0)
+    @media screen and (max-width: var.$break-dt)
+      transform: translate(-100%)
     transition: all .3s ease
     border: none
     color: black
