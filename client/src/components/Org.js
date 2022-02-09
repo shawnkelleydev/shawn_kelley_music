@@ -39,7 +39,7 @@ export default function Org(props) {
 
   useEffect(() => {
     if (active) {
-      if (compY <= height - 50 && compY > 50) {
+      if (compY <= height - 50) {
         setShow(true);
       } else {
         setShow(false);
