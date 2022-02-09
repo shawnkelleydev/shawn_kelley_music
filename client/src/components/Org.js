@@ -7,6 +7,7 @@ export default function Org(props) {
   const [height, setHeight] = useState(null);
   // component window position relative to the top of the viewport
   const [compY, setCompY] = useState(null);
+  const [compX, setCompX] = useState(null);
   // show / hide
   const [show, setShow] = useState(false);
   // i
@@ -33,19 +34,26 @@ export default function Org(props) {
       let yFromViewportTop = parseInt(
         item.getBoundingClientRect().y.toFixed(0)
       );
+      let xFromViewportLeft = parseInt(
+        item.getBoundingClientRect().x.toFixed(0)
+      );
       setCompY(yFromViewportTop);
+      setCompX(xFromViewportLeft);
     }
   }, [y, i]);
 
   useEffect(() => {
     if (active) {
       if (compY <= height - 50) {
-        setShow(true);
+        function showTrue() {
+          setShow(true);
+        }
+        setTimeout(showTrue, compX * 0.2);
       } else {
         setShow(false);
       }
     }
-  }, [height, compY, active]);
+  }, [height, compY, compX, active]);
 
   return (
     <h3 className="Org" id={`Org-${props.i}`}>
