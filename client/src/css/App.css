@@ -146,6 +146,9 @@ nav svg:hover {
   align-items: stretch;
   gap: 36px;
 }
+.Proof div h3 {
+  background: tomato;
+}
 .Proof h1 {
   font-size: 3em;
   margin-bottom: 48px;
