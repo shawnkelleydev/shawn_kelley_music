@@ -5,16 +5,16 @@ import ReactMarkdown from "react-markdown";
 export default function About() {
   return (
     <div className="About">
-      <div className="grid">
-        <div>
-          <img src={hs} alt="shawn kelley headshot" />
-        </div>
-        <div>
+      <div>
+        <img src={hs} alt="headshot of Shawn Kelley" />
+      </div>
+      <div>
+        <span>
           <h1>About Shawn</h1>
-          {bio.map((item, i) => (
-            <ReactMarkdown key={i} children={item} />
+          {bio.map((par, i) => (
+            <ReactMarkdown children={par} key={i} />
           ))}
-        </div>
+        </span>
       </div>
     </div>
   );
