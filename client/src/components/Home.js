@@ -20,8 +20,8 @@ export default function Home() {
 
     setHeight(window.innerHeight);
 
-    window.onscroll = handleY;
-    window.onresize = handleHeight;
+    window.addEventListener("scroll", handleY, { passive: true });
+    window.addEventListener("resize", handleHeight, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", handleY);

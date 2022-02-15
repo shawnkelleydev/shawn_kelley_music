@@ -56,8 +56,8 @@ export default function Org(props) {
   }, [height, compY, compX, active]);
 
   return (
-    <h3 className="Org" id={`Org-${props.i}`}>
+    <h2 className="Org" id={`Org-${props.i}`}>
       <span className={!show ? "hidden" : null}>{props.org}</span>
-    </h3>
+    </h2>
   );
 }

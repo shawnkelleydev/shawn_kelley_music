@@ -26,6 +26,17 @@ footer {
 footer p {
   margin: 0;
 }
+footer svg {
+  fill: white;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: fill 0.3s;
+}
+footer svg:hover {
+  fill: #8eccf0;
+}
 footer > div {
   display: grid;
   gap: 12px;
@@ -69,7 +80,7 @@ header a {
 .Logo svg {
   margin-right: 8px;
   height: 20px;
-  fill: #ea7d61;
+  fill: #ea9361;
 }
 
 nav {
@@ -95,7 +106,7 @@ nav svg {
   transition: all 0.3s ease;
 }
 nav svg:hover {
-  fill: #34c0e4;
+  fill: #8eccf0;
 }
 
 .Jumbotron {
@@ -136,7 +147,7 @@ nav svg:hover {
   padding: 48px;
   margin: 48px 0 0 0;
   color: white;
-  background: #0f5c70;
+  background: #092e43;
   box-shadow: 0 0 16px #141414;
   width: 100vw;
   display: flex;
@@ -249,14 +260,14 @@ nav svg:hover {
 .Action span {
   position: absolute;
   padding: 24px;
-  background: #9D3115;
+  background: #9d4715;
 }
 .Action .button {
   transform: translate(0);
   transition: all 0.3s ease;
   border: none;
   color: black;
-  background: #15819d;
+  background: #156b9d;
 }
 @media screen and (max-width: 996px) {
   .Action .button {
@@ -305,7 +316,7 @@ nav svg:hover {
 .Piece h1 {
   text-transform: capitalize;
   margin: 0 0 24px 0;
-  color: #9D3115;
+  color: #9d4715;
 }
 .Piece h2 {
   margin: 0 0 8px 0;
@@ -372,7 +383,7 @@ nav svg:hover {
   justify-content: center;
 }
 .BreadCrumb a {
-  color: #9D3115;
+  color: #9d4715;
   width: fit-content;
 }
 .BreadCrumb span {
@@ -450,12 +461,12 @@ a {
 }
 
 a:hover {
-  color: #34c0e4;
+  color: #8eccf0;
 }
 
 .active {
-  color: #34c0e4;
-  fill: #34c0e4;
+  color: #8eccf0;
+  fill: #8eccf0;
 }
 
 .uppercase {
