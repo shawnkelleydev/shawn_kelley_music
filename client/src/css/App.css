@@ -49,6 +49,7 @@ footer > div {
 
 header {
   position: fixed;
+  z-index: 999;
   top: 0;
   width: 100vw;
   margin: 0;
@@ -256,32 +257,42 @@ nav svg:hover {
 
 .Action {
   overflow: hidden;
-}
-.Action span {
-  position: absolute;
-  padding: 24px;
-  background: #9d4715;
-}
-.Action .button {
-  transform: translate(0);
-  transition: all 0.3s ease;
-  border: none;
-  color: black;
-  background: #156b9d;
-}
-@media screen and (max-width: 996px) {
-  .Action .button {
-    transform: translate(-100%);
-  }
-}
-.Action span, .Action .button {
-  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
   color: white;
-  font-size: 1em;
+  padding: 24px;
+  border-radius: 12px;
+  border: none;
+  text-transform: uppercase;
   cursor: pointer;
+  font-size: 1em;
 }
-.Action .hidden {
-  transform: translate(-100%);
+.Action::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #9d4715;
+  left: 0;
+  bottom: 0;
+  z-index: -2;
+}
+.Action::before {
+  content: "";
+  width: 0;
+  height: 100%;
+  position: absolute;
+  background: #ca5b1b;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: all 0.3s;
+}
+@media screen and (min-width: 996px) {
+  .Action:hover::before {
+    width: 100%;
+  }
 }
 
 .Store {
